@@ -2,8 +2,8 @@
 title: "ARMStrong: отчет по выбросам"
 date: 2022-11-06T10:00:20-08:00
 draft: false
-tags: ["armstrong", "report"]
-categories: ["projects", "armstrong"]
+tags: ["armstrong", "dev", "report"]
+categories: ["projects"]
 ---
 
 {{< katex >}}
