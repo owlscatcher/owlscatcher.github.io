@@ -6,12 +6,14 @@ tags: ["dev", "python", "linux"]
 categories: ["blog"]
 ---
 
-# Дьявол в деталях
+## Дьявол в деталях
 
 {{< alert >}}
 В начале сотворил он небо и землю
 На второй день разделил он свет и тьму
+
 ...
+
 На седьмой день разобрался он с systemd, запустил в фоне службы, автоматизирующие процессы, и больше никогда не был online.
 {{< /alert >}}
 
@@ -43,7 +45,7 @@ Python3 ~/MyFirstDeploy/best_fucking_idea.py
 
 Вводную получили, поехали стучать по клавишам!
 
-# Мой лучший друг — демон
+## Мой лучший друг — демон
 
 Итак, у нас было:
 
@@ -104,7 +106,7 @@ lrwxrwxrwx  1 root root   41 Jan 31 22:28 vmtoolsd.service -> /lib/systemd/syste
 
 Создадим новый файл конфигурации демона для нашего приложения.
 
-## Создаём конфигурацию демона
+### Создаём конфигурацию демона
 
 Без лишних слов, будучи в папке `/etc/systemd/system/`
 
@@ -151,7 +153,7 @@ WantedBy=multi-user.target
 
 [Описание всех ключей тут.](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/chap-managing_services_with_systemd#sect-Managing_Services_with_systemd-Unit_File_Structure)
 
-## Прячем от чужих глаз чувствительные данные
+### Прячем от чужих глаз чувствительные данные
 
 Бывает такое, что приложение использует какие-то пароли / ключи / токены и тд, которые не стоит держать в открытом виде в скрипте или где-то рядом с ним, что бы случайно не выгрузить на github в публичный репозиторий. В таком случае можно восппользоваться переменными окружения или `Environment variable`.
 
@@ -187,7 +189,7 @@ Environment="resources_path=/root/telegram-bot/resources"
 
 Теперь при запуске службы будут подтянуты переменные окружения и ваш код приложения, который требовал эти самые `environment variable` будет отрабатывать как положено.
 
-## Запускаем и проверяем статус нашего демона
+### Запускаем и проверяем статус нашего демона
 
 Мы сделали все нужные настройки, теперь надо рассказать нашему `systemctl` о нашем демоне, добавить его в автозапуск и запустить наконец-то.
 
@@ -228,7 +230,7 @@ systemctl status bot.service
 
 Если в статусе `Failed`, значит либо что-то с приложением, либо что-то с настройкой. Можно пойти почитать логи коммандой `[dmesg](https://manpages.org/dmesg)` или `cat /var/log/syslog`.
 
-# Полезные ссылки
+## Полезные ссылки
 
 - [Простейший способ превратить скрипт в демона](https://lincolnloop.com/blog/joy-upstart/), [Linkolnloop](http://lincolnloop.com), Graham King
 - [Руководство для начинающих по systemctl](https://bitlaunch.io/blog/a-beginners-guide-to-systemctl/), BitLaunch
@@ -238,7 +240,7 @@ systemctl status bot.service
 - [Как создать и удалить символическую ссылку](https://www.freecodecamp.org/news/symlink-tutorial-in-linux-how-to-create-and-remove-a-symbolic-link/), freecodecamp, [Dillion Megida](https://www.freecodecamp.org/news/author/dillionmegida/)
 - [Как читать и устанавливать переменные среды и  shell в Linux](https://www.digitalocean.com/community/tutorials/how-to-read-and-set-environmental-and-shell-variables-on-linux), библиотека [Digital Ocean](http://digitalocean.com)
 
-# Благодарности серому волшебнику
+## Благодарности серому волшебнику
 
 Если текст был полезен и ты не можешь усмирить желание быть благодарным, то вот мои кошелечки (USDT и TRX кошельки одинаковые, да, это не ошибка):
 
