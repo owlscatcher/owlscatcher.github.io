@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>armstrong on Owls&#39; Catcher</title>
+    <link>/categories/armstrong/</link>
+    <description>Recent content in armstrong on Owls&#39; Catcher</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 20 Nov 2022 10:00:20 -0800</lastBuildDate><atom:link href="/categories/armstrong/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ARMStrong: отчет по выбросам</title>
+      <link>/posts/arms-blowout-report/</link>
+      <pubDate>Sun, 20 Nov 2022 10:00:20 -0800</pubDate>
+      
+      <guid>/posts/arms-blowout-report/</guid>
+      <description>ARMStrong: как мы собираем отчеты по выбросам # Контроль, контроль и еще раз контроль!</description>
+    </item>
+    
+  </channel>
+</rss>
