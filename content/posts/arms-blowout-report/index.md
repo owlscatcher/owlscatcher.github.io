@@ -97,7 +97,7 @@ public double GetSystemBlowout(List<History> histories, Channel channel)
 ## Группируем выбросы по категориям
 
 ```csharp
-// TODO
+// TODO завтра
 ```
 
 ## Рассчитываем среднее по МЭД и йодному участку
