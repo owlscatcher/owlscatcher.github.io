@@ -7,7 +7,7 @@ rtl = false
 
 title = "Owls' Catcher"
 logo = "img/logo.webp"
-description = "Hi, my name Aleexander, nice to meet you!"
+description = "Hi, my name is Alexander, nice to meet you!"
 # copyright = "Copy, _right?_ :thinking_face:"
 
 dateFormat = "2 January 2006"
@@ -15,7 +15,7 @@ dateFormat = "2 January 2006"
 [author]
   name = "Owls' Catcher"
   image = "img/author.webp"
-  headline = "I'm only human"
+  headline = "We are Futurists. Game on."
   bio = "Engineer at RIARa, dev. at \"ARMStrong\""
   links = [
     { github = "https://github.com/owlscatcher" },
