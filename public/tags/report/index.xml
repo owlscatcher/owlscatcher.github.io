@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>report on Owls&#39; Catcher</title>
-    <link>/tags/report/</link>
+    <link>https://owlscatcher.github.io/tags/report/</link>
     <description>Recent content in report on Owls&#39; Catcher</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 20 Nov 2022 10:00:20 -0800</lastBuildDate><atom:link href="/tags/report/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Nov 2022 10:00:20 -0800</lastBuildDate><atom:link href="https://owlscatcher.github.io/tags/report/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ARMStrong: отчет по выбросам</title>
-      <link>/posts/arms-blowout-report/</link>
-      <pubDate>Sun, 20 Nov 2022 10:00:20 -0800</pubDate>
+      <link>https://owlscatcher.github.io/posts/arms-blowout-report/</link>
+      <pubDate>Sun, 06 Nov 2022 10:00:20 -0800</pubDate>
       
-      <guid>/posts/arms-blowout-report/</guid>
+      <guid>https://owlscatcher.github.io/posts/arms-blowout-report/</guid>
       <description>ARMStrong: как мы собираем отчеты по выбросам # Контроль, контроль и еще раз контроль!</description>
     </item>
     

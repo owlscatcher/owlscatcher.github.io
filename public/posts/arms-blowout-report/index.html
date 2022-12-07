@@ -24,7 +24,7 @@
   
   
   
-  <link rel="canonical" href="/posts/arms-blowout-report/" />
+  <link rel="canonical" href="https://owlscatcher.github.io/posts/arms-blowout-report/" />
   
   
   
@@ -74,13 +74,13 @@
   <meta property="og:title" content="ARMStrong: отчет по выбросам" />
 <meta property="og:description" content="ARMStrong: как мы собираем отчеты по выбросам # Контроль, контроль и еще раз контроль!" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/posts/arms-blowout-report/" /><meta property="og:image" content="/posts/arms-blowout-report/feature.jpg"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-11-20T10:00:20-08:00" />
-<meta property="article:modified_time" content="2022-11-20T10:00:20-08:00" /><meta property="og:site_name" content="Owls&#39; Catcher" />
+<meta property="og:url" content="https://owlscatcher.github.io/posts/arms-blowout-report/" /><meta property="og:image" content="https://owlscatcher.github.io/posts/arms-blowout-report/feature.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-11-06T10:00:20-08:00" />
+<meta property="article:modified_time" content="2022-11-06T10:00:20-08:00" /><meta property="og:site_name" content="Owls&#39; Catcher" />
 
 
   <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="/posts/arms-blowout-report/feature.jpg"/>
+<meta name="twitter:image" content="https://owlscatcher.github.io/posts/arms-blowout-report/feature.jpg"/>
 <meta name="twitter:title" content="ARMStrong: отчет по выбросам"/>
 <meta name="twitter:description" content="ARMStrong: как мы собираем отчеты по выбросам # Контроль, контроль и еще раз контроль!"/>
 
@@ -95,21 +95,21 @@
     
     "abstract": "ARMStrong: как мы собираем отчеты по выбросам # Контроль, контроль и еще раз контроль!",
     "inLanguage": "en",
-    "url" : "\/posts\/arms-blowout-report\/",
+    "url" : "https:\/\/owlscatcher.github.io\/posts\/arms-blowout-report\/",
     "author" : {
       "@type": "Person",
       "name": "Owls\u0027 Catcher"
     },
     "copyrightYear": "2022",
-    "dateCreated": "2022-11-20T10:00:20-08:00",
-    "datePublished": "2022-11-20T10:00:20-08:00",
+    "dateCreated": "2022-11-06T10:00:20-08:00",
+    "datePublished": "2022-11-06T10:00:20-08:00",
     
-    "dateModified": "2022-11-20T10:00:20-08:00",
+    "dateModified": "2022-11-06T10:00:20-08:00",
     
-    "keywords": ["armstrong","report"],
+    "keywords": ["armstrong","dev","report"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "412"
+    "wordCount": "1156"
   }]
   </script>
 
@@ -409,7 +409,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2022-11-20 10:00:20 -0800 -0800">20 November 2022</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
+      <time datetime="2022-11-06 10:00:20 -0800 -0800">6 November 2022</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">6 mins</span>
     
 
     
@@ -428,12 +428,6 @@
               >projects</a
             >
           
-            <a
-              href="/categories/armstrong/"
-              class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >armstrong</a
-            >
-          
         
       
         
@@ -442,6 +436,12 @@
               href="/tags/armstrong/"
               class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
               >armstrong</a
+            >
+          
+            <a
+              href="/tags/dev/"
+              class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >dev</a
             >
           
             <a
@@ -481,7 +481,11 @@
     <nav id="TableOfContents">
   <ul>
     <li><a href="#введение">Введение</a></li>
-    <li><a href="#формулы-для-расчетов">Формулы для расчетов</a></li>
+    <li><a href="#рассчитываем-выбросы">Рассчитываем выбросы</a></li>
+    <li><a href="#группируем-выбросы-по-категориям">Группируем выбросы по категориям</a></li>
+    <li><a href="#рассчитываем-среднее-по-мэд-и-йодному-участку">Рассчитываем среднее по МЭД и йодному участку</a></li>
+    <li><a href="#отображаем-пользователю-отчёт">Отображаем пользователю отчёт</a></li>
+    <li><a href="#в-планах">В планах</a></li>
   </ul>
 </nav>
   </div>
@@ -491,7 +495,9 @@
         </div>
       
       <div class="min-w-0 min-h-0 max-w-prose grow">
-        <h1 id="armstrong-как-мы-собираем-отчеты-по-выбросам" class="relative group">ARMStrong: как мы собираем отчеты по выбросам <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#armstrong-%d0%ba%d0%b0%d0%ba-%d0%bc%d1%8b-%d1%81%d0%be%d0%b1%d0%b8%d1%80%d0%b0%d0%b5%d0%bc-%d0%be%d1%82%d1%87%d0%b5%d1%82%d1%8b-%d0%bf%d0%be-%d0%b2%d1%8b%d0%b1%d1%80%d0%be%d1%81%d0%b0%d0%bc" aria-label="Anchor">#</a></span></h1>
+        
+
+<h1 id="armstrong-как-мы-собираем-отчеты-по-выбросам" class="relative group">ARMStrong: как мы собираем отчеты по выбросам <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#armstrong-%d0%ba%d0%b0%d0%ba-%d0%bc%d1%8b-%d1%81%d0%be%d0%b1%d0%b8%d1%80%d0%b0%d0%b5%d0%bc-%d0%be%d1%82%d1%87%d0%b5%d1%82%d1%8b-%d0%bf%d0%be-%d0%b2%d1%8b%d0%b1%d1%80%d0%be%d1%81%d0%b0%d0%bc" aria-label="Anchor">#</a></span></h1>
 <div class="lead !mb-9 text-xl">
   Контроль, контроль и еще раз контроль! Смотрим, какое количество активных газов мы выбрасываем, оцениваем их вес и формируем отчеты.
 </div>
@@ -507,16 +513,14 @@
 
 
   </span>
-  <span class="dark:text-neutral-300"><strong>Внимание!</strong> спасибо за внимание.</span>
+  <span class="dark:text-neutral-300"><strong>Внимание!</strong> Спасибо за внимание.</span>
 </div>
 
 <h2 id="введение" class="relative group">Введение <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%d0%b2%d0%b2%d0%b5%d0%b4%d0%b5%d0%bd%d0%b8%d0%b5" aria-label="Anchor">#</a></span></h2>
 <p>На атомных, хим и металлургических предприятиях всегда требуется контроль за уровнем выхода активных веществ, которое сбрасывает предприятие. Эти уровни устанавливаются нормативными актами и не должны быть превышены.</p>
 <p>На различных предприятиях отчетность ведётся по-разному, мы же разберем случай, когда есть оперативный контроллирующий персонал, который должен заносить запись об контроллируемой обстановке в оперативный журнал каждые <em>n</em> часов, в начале смены или же посуточно.</p>
 <p>Для этих целей был разработан небольшой модуль для клиента <a href="https://github.com/digital-armstrong/Armstrong.Client"   target="_blank">ARMStrong</a>, который и будет формировать отчетность по выбрасываемым газам, средней активности на МЭД-точках контроля и \(I_{131}\)-участке.</p>
-<h2 id="формулы-для-расчетов" class="relative group">Формулы для расчетов <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%d1%84%d0%be%d1%80%d0%bc%d1%83%d0%bb%d1%8b-%d0%b4%d0%bb%d1%8f-%d1%80%d0%b0%d1%81%d1%87%d0%b5%d1%82%d0%be%d0%b2" aria-label="Anchor">#</a></span></h2>
-
-
+<h2 id="рассчитываем-выбросы" class="relative group">Рассчитываем выбросы <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%d1%80%d0%b0%d1%81%d1%81%d1%87%d0%b8%d1%82%d1%8b%d0%b2%d0%b0%d0%b5%d0%bc-%d0%b2%d1%8b%d0%b1%d1%80%d0%be%d1%81%d1%8b" aria-label="Anchor">#</a></span></h2>
 <div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
   <span class="text-primary-400 ltr:pr-3 rtl:pl-3">
     
@@ -538,10 +542,12 @@
 </span></span></code></pre></div></span>
 </div>
 
-<p>Суммарный выброс складывается из суммы средних значений измерений за период между соседними точками, умноженный на длительность выброса.</p>
-<p>За период выброса мы принимаем дельту между соседними точками: \(N_1\) &ndash; точка, которую принимаем за начало отсчета; \(N_2\) &ndash; точка, принимаемая за окончание отсчета.</p>
-<p>Среднее по этим точкам мы берем по причине, что не представляется возможным предугадать, в какой момент времени между двумя соседними точками начался рост или спад.</p>
-<p>Из суммы этих периодов и складывается суммарный выброс, который пока еще не учитывает установленный расход по трубе, поэтому полученную сумму нужно умножить на расход.</p>
+<p>Что бы вычислить, сколько <em>Бк</em> было выброшено, нам нужно знать значение на момент начала расчёта, продолжительность выброса и значение на момент окончания расчёта. Значение на момент начала и окончания расчёта мы принимаем за \(N_1\) и \(N_2\) соответственно.</p>
+<p>За продолжительность выброса мы возьмем \(\Delta T\), которая является просто разницей по времени между второй и первой точкой.</p>
+<p>Таким образом для вычисления выброса нам требуется две точки и выброс будет расчитываться как:</p>
+<p>\(S = \dfrac{N_1 + N_2}{2} \Delta T\)</p>
+<p>Среднее по этим точкам мы берем по причине, что не представляется возможным предугадать, в какой момент времени между двумя соседними точками начался рост или спад. Минимальное время регистрации можно устанавливать в 2.5 секунды, но ввиду особенности блоков детектирования типа БДГБ-02П и подобных сокращать окно практически бессмысленно, это не приводит к увеличению точность.</p>
+<p>Далее, чтобы вычислить суммарный расход, нужно просто просуммировать все результаты и умножить на расход по вентсистеме точки контроля.</p>
 <p>Расход хранится в формате \(\dfrac{м^3}{час}\), поэтому требуется привести его к \(\dfrac{м^3}{сек}\), для этого просто разделим его на 3600.</p>
 <p>Учитывая вышесказанное мы можем вывести формулу расчета выбросов и применить её в коде клиента:</p>
 <p>\(S_{sum} = (\sum{\dfrac{N_1 + N_2}{2} \Delta T}) C_{sec} \), где:</p>
@@ -549,7 +555,7 @@
 <li>\(S_{sum}\) &ndash; суммарный выброс по точке контроля, \(Бк\);</li>
 <li>\(\dfrac{N_1 + N_2}{2}\) &ndash; среднее значение по двум точкам, \(\dfrac{Бк}{м^3}\)</li>
 <li>\(\Delta T\) &ndash; длительность выброса \(T_2 - T_1\), \(сек.\);</li>
-<li>\(C_{sec}\) &ndash; расход газа через трубу канала \(\dfrac{C_{hour}}{3600}\), \(\dfrac{м^3}{сек}\).</li>
+<li>\(C_{sec}\) &ndash; расход газа через вентсистему точки контроля \(\dfrac{C_{hour}}{3600}\), \(\dfrac{м^3}{сек}\).</li>
 </ul>
 <p>Метод для расчета выбросов будет следующим:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">public</span> <span class="kt">double</span> <span class="n">GetSystemBlowout</span><span class="p">(</span><span class="n">List</span><span class="p">&lt;</span><span class="n">History</span><span class="p">&gt;</span> <span class="n">histories</span><span class="p">,</span> <span class="n">Channel</span> <span class="n">channel</span><span class="p">)</span>
@@ -576,7 +582,202 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">summaryBlowout</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div>
+</span></span></code></pre></div><h2 id="группируем-выбросы-по-категориям" class="relative group">Группируем выбросы по категориям <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%d0%b3%d1%80%d1%83%d0%bf%d0%bf%d0%b8%d1%80%d1%83%d0%b5%d0%bc-%d0%b2%d1%8b%d0%b1%d1%80%d0%be%d1%81%d1%8b-%d0%bf%d0%be-%d0%ba%d0%b0%d1%82%d0%b5%d0%b3%d0%be%d1%80%d0%b8%d1%8f%d0%bc" aria-label="Anchor">#</a></span></h2>
+<p>На данный момент группы были <a href="https://en.wikipedia.org/wiki/Hard_coding"   target="_blank">захардкодены</a>, и выглядит это следующим образом:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">private</span> <span class="k">void</span> <span class="n">SetBlowoutReportCategory</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">V1id</span> <span class="p">=</span> <span class="m">275</span><span class="p">,</span> <span class="n">V2id</span> <span class="p">=</span> <span class="m">276</span><span class="p">,</span> <span class="n">V3id</span> <span class="p">=</span> <span class="m">277</span><span class="p">,</span> <span class="n">V4id</span> <span class="p">=</span> <span class="m">278</span><span class="p">,</span> <span class="n">V4_id</span> <span class="p">=</span> <span class="m">279</span><span class="p">,</span> <span class="n">V5id</span> <span class="p">=</span> <span class="m">280</span><span class="p">,</span> <span class="n">V6id</span> <span class="p">=</span> <span class="m">281</span><span class="p">,</span> <span class="n">V7id</span> <span class="p">=</span> <span class="m">282</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span><span class="p">[]</span> <span class="n">categoryI</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[]</span> <span class="p">{</span> <span class="n">V1id</span><span class="p">,</span> <span class="n">V7id</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span><span class="p">[]</span> <span class="n">categoryII</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[]</span> <span class="p">{</span> <span class="n">V2id</span><span class="p">,</span> <span class="n">V3id</span><span class="p">,</span> <span class="n">V4_id</span><span class="p">,</span> <span class="n">V5id</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span><span class="p">[]</span> <span class="n">categoryIII</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[]</span> <span class="p">{</span> <span class="n">V6id</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">categoryI</span><span class="p">.</span><span class="n">Contains</span><span class="p">(</span><span class="n">Channel</span><span class="p">.</span><span class="n">Id</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">BlowoutReportCategory</span> <span class="p">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">BlowoutCategory</span><span class="p">.</span><span class="n">I</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">categoryII</span><span class="p">.</span><span class="n">Contains</span><span class="p">(</span><span class="n">Channel</span><span class="p">.</span><span class="n">Id</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">BlowoutReportCategory</span> <span class="p">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">BlowoutCategory</span><span class="p">.</span><span class="n">II</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">categoryIII</span><span class="p">.</span><span class="n">Contains</span><span class="p">(</span><span class="n">Channel</span><span class="p">.</span><span class="n">Id</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">BlowoutReportCategory</span> <span class="p">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">BlowoutCategory</span><span class="p">.</span><span class="n">III</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Изначально немного неверно были спроектированы модели, мы отталкивались от существующей базы данных и в будущем будем это исправлять, ну а пока <del>говнокодим</del> хардкодим и проверяем как работает.</p>
+<p>В коде выше мы просто отсортировали каналы по категориям. ID-каналов мы указали руками, какой в какую категорию должен отправляться, это тоже неверное, так делать нельзя <del>но нам льзя</del>.</p>
+<p>Теперь можно посчитать суммарную активность по категориям:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">private</span> <span class="k">void</span> <span class="n">StartReport</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">V1</span> <span class="p">=</span> <span class="m">275</span><span class="p">,</span> <span class="n">V2</span> <span class="p">=</span> <span class="m">276</span><span class="p">,</span> <span class="n">V3</span> <span class="p">=</span> <span class="m">277</span><span class="p">,</span> <span class="n">V4</span> <span class="p">=</span> <span class="m">278</span><span class="p">,</span> <span class="n">V4_</span> <span class="p">=</span> <span class="m">279</span><span class="p">,</span> <span class="n">V5</span> <span class="p">=</span> <span class="m">280</span><span class="p">,</span> <span class="n">V6</span> <span class="p">=</span> <span class="m">281</span><span class="p">,</span> <span class="n">V7</span> <span class="p">=</span> <span class="m">282</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span><span class="p">[]</span> <span class="n">blowoutGroup</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[]</span> <span class="p">{</span> <span class="n">V1</span><span class="p">,</span> <span class="n">V2</span><span class="p">,</span> <span class="n">V3</span><span class="p">,</span> <span class="n">V4</span><span class="p">,</span> <span class="n">V4_</span><span class="p">,</span> <span class="n">V5</span><span class="p">,</span> <span class="n">V6</span><span class="p">,</span> <span class="n">V7</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">var</span> <span class="n">I</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Channel</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ChannelName</span> <span class="p">=</span> <span class="s">&#34;Категория I&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">SystemEventValue</span> <span class="p">=</span> <span class="n">BlowoutReport</span>
+</span></span><span class="line"><span class="cl">                            <span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">x</span> <span class="p">=&gt;</span> <span class="n">x</span><span class="p">.</span><span class="n">BlowoutReportCategory</span> <span class="p">==</span> <span class="m">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                            <span class="p">.</span><span class="n">Sum</span><span class="p">(</span><span class="n">x</span> <span class="p">=&gt;</span> <span class="n">x</span><span class="p">.</span><span class="n">BlowoutSystemValue</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">        <span class="n">NotSystemEventValue</span> <span class="p">=</span> <span class="n">BlowoutReport</span>
+</span></span><span class="line"><span class="cl">                                <span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">x</span> <span class="p">=&gt;</span> <span class="n">x</span><span class="p">.</span><span class="n">BlowoutReportCategory</span> <span class="p">==</span> <span class="m">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                                <span class="p">.</span><span class="n">Sum</span><span class="p">(</span><span class="n">x</span> <span class="p">=&gt;</span> <span class="n">x</span><span class="p">.</span><span class="n">BlowoutNotSystemValue</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">var</span> <span class="n">II</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Channel</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ChannelName</span> <span class="p">=</span> <span class="s">&#34;Категория II&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">SystemEventValue</span> <span class="p">=</span> <span class="n">BlowoutReport</span>
+</span></span><span class="line"><span class="cl">                            <span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">x</span> <span class="p">=&gt;</span> <span class="n">x</span><span class="p">.</span><span class="n">BlowoutReportCategory</span> <span class="p">==</span> <span class="m">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                            <span class="p">.</span><span class="n">Sum</span><span class="p">(</span><span class="n">x</span> <span class="p">=&gt;</span> <span class="n">x</span><span class="p">.</span><span class="n">BlowoutSystemValue</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">        <span class="n">NotSystemEventValue</span> <span class="p">=</span> <span class="n">BlowoutReport</span>
+</span></span><span class="line"><span class="cl">                                <span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">x</span> <span class="p">=&gt;</span> <span class="n">x</span><span class="p">.</span><span class="n">BlowoutReportCategory</span> <span class="p">==</span> <span class="m">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                                <span class="p">.</span><span class="n">Sum</span><span class="p">(</span><span class="n">x</span> <span class="p">=&gt;</span> <span class="n">x</span><span class="p">.</span><span class="n">BlowoutNotSystemValue</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">var</span> <span class="n">III</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Channel</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ChannelName</span> <span class="p">=</span> <span class="s">&#34;Категория III&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">SystemEventValue</span> <span class="p">=</span> <span class="n">BlowoutReport</span>
+</span></span><span class="line"><span class="cl">                            <span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">x</span> <span class="p">=&gt;</span> <span class="n">x</span><span class="p">.</span><span class="n">BlowoutReportCategory</span> <span class="p">==</span> <span class="m">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                            <span class="p">.</span><span class="n">Sum</span><span class="p">(</span><span class="n">x</span> <span class="p">=&gt;</span> <span class="n">x</span><span class="p">.</span><span class="n">BlowoutSystemValue</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">        <span class="n">NotSystemEventValue</span> <span class="p">=</span> <span class="n">BlowoutReport</span>
+</span></span><span class="line"><span class="cl">                                <span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">x</span> <span class="p">=&gt;</span> <span class="n">x</span><span class="p">.</span><span class="n">BlowoutReportCategory</span> <span class="p">==</span> <span class="m">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                                <span class="p">.</span><span class="n">Sum</span><span class="p">(</span><span class="n">x</span> <span class="p">=&gt;</span> <span class="n">x</span><span class="p">.</span><span class="n">BlowoutNotSystemValue</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">var</span> <span class="n">summ</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Channel</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ChannelName</span> <span class="p">=</span> <span class="s">&#34;Суммарная&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">SystemEventValue</span> <span class="p">=</span> <span class="n">I</span><span class="p">.</span><span class="n">SystemEventValue</span> <span class="p">+</span> <span class="n">II</span><span class="p">.</span><span class="n">SystemEventValue</span> <span class="p">+</span> <span class="n">III</span><span class="p">.</span><span class="n">SystemEventValue</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">NotSystemEventValue</span> <span class="p">=</span> <span class="n">I</span><span class="p">.</span><span class="n">NotSystemEventValue</span> <span class="p">+</span> <span class="n">II</span><span class="p">.</span><span class="n">NotSystemEventValue</span> <span class="p">+</span> <span class="n">III</span><span class="p">.</span><span class="n">NotSystemEventValue</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">CategoryBlowoutBindingCollection</span> <span class="p">=</span> <span class="n">ReportsCollectionSingleton</span><span class="p">.</span><span class="n">GetInstance</span><span class="p">().</span><span class="n">CategoryCollection</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">CategoryBlowoutBindingCollection</span><span class="p">.</span><span class="n">Clear</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">CategoryBlowoutBindingCollection</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">I</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">CategoryBlowoutBindingCollection</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">II</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">CategoryBlowoutBindingCollection</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">III</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">CategoryBlowoutBindingCollection</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">summ</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Тут все просто, суммируем по группе и все: \(S_{cat} = \sum N\)</p>
+<p>Да, это некрасиво и очень неудобно, но для того, что бы проверить, как это работает &ndash; сойдет. В будущем ID-каналов и группы будут вынесены во внешний файл настроек.</p>
+<p>Из пояснений стоит сказать, что мы немного схитрили и используем объект канала, что бы вывести расчеты по группам в таблицу отчётов. Это в нашем случае удобно, что бы не плодить новые сущности, но нарушает концепцию и заводит в заблуждение других разработчиков. В будущем, возможно, над этим стоит поразмыслить.</p>
+<h2 id="рассчитываем-среднее-по-мэд-и-йодному-участку" class="relative group">Рассчитываем среднее по МЭД и йодному участку <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%d1%80%d0%b0%d1%81%d1%81%d1%87%d0%b8%d1%82%d1%8b%d0%b2%d0%b0%d0%b5%d0%bc-%d1%81%d1%80%d0%b5%d0%b4%d0%bd%d0%b5%d0%b5-%d0%bf%d0%be-%d0%bc%d1%8d%d0%b4-%d0%b8-%d0%b9%d0%be%d0%b4%d0%bd%d0%be%d0%bc%d1%83-%d1%83%d1%87%d0%b0%d1%81%d1%82%d0%ba%d1%83" aria-label="Anchor">#</a></span></h2>
+<p>Мы на финишной прямой! Осталось совсем немного &ndash; посчитать среднее по точкам контроля, которые следят за МЭД, т.е. за мощностью эквивалентной дозы и посчитать среднее по йодному участку.</p>
+<p>Приступим!</p>
+<p>Среднее считаеть будем просто: \(S_{avg} = \dfrac{N_1 + N_2 + N_n}{n}\)</p>
+<p>Для удобства сделаем человеко-читаемые нотации категорий и типов блоков:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">enum</span> <span class="n">DeviceType</span> <span class="p">:</span> <span class="kt">int</span> <span class="p">{</span> <span class="n">EquivalenDoseRate</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">GasVolumetricActivity</span><span class="p">,</span> <span class="n">AerosolVolumetricActivity</span><span class="p">,</span> <span class="n">Impulses</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="k">enum</span> <span class="n">Category</span> <span class="p">:</span> <span class="kt">int</span> <span class="p">{</span> <span class="n">SpecialControl</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">Blowout</span><span class="p">,</span> <span class="n">Aerosol</span><span class="p">,</span> <span class="n">Impulses</span> <span class="p">};</span>
+</span></span></code></pre></div><p>Наполняем объект отчёта:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">public</span> <span class="n">Report</span><span class="p">(</span><span class="kt">int</span> <span class="n">id</span><span class="p">,</span> <span class="n">DateTime</span> <span class="n">startDateTime</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">switch</span> <span class="p">(</span><span class="n">Channel</span><span class="p">.</span><span class="n">DeviceType</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">DeviceType</span><span class="p">.</span><span class="n">EquivalenDoseRate</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ReportCategory</span> <span class="p">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">Category</span><span class="p">.</span><span class="n">SpecialControl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">AverageNotSystemValue</span> <span class="p">=</span> <span class="n">UnitConverter</span><span class="p">.</span><span class="n">Convert</span><span class="p">(</span><span class="n">type</span><span class="p">:</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">DeviceType</span><span class="p">.</span><span class="n">EquivalenDoseRate</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                                                          <span class="k">value</span><span class="p">:</span> <span class="n">AverageSystemValue</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">DeviceType</span><span class="p">.</span><span class="n">AerosolVolumetricActivity</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ReportCategory</span> <span class="p">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">Category</span><span class="p">.</span><span class="n">Aerosol</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">AverageNotSystemValue</span> <span class="p">=</span> <span class="n">UnitConverter</span><span class="p">.</span><span class="n">Convert</span><span class="p">(</span><span class="n">type</span><span class="p">:</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">DeviceType</span><span class="p">.</span><span class="n">AerosolVolumetricActivity</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                                                          <span class="k">value</span><span class="p">:</span> <span class="n">AverageSystemValue</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">default</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">AverageNotSystemValue</span> <span class="p">=</span> <span class="n">AverageSystemValue</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//...</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Сам метод, который считает среднее, просто обычные LINQ-запросы:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">private</span> <span class="kt">double</span> <span class="n">GetAverageSystemValue</span><span class="p">()</span> <span class="p">=&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ReportHistories</span><span class="p">.</span><span class="n">Any</span><span class="p">()</span> <span class="p">?</span> <span class="n">ReportHistories</span><span class="p">.</span><span class="n">Average</span><span class="p">(</span><span class="n">avg</span> <span class="p">=&gt;</span> <span class="n">avg</span><span class="p">.</span><span class="n">SystemEventValue</span><span class="p">)</span> <span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+</span></span></code></pre></div><h2 id="отображаем-пользователю-отчёт" class="relative group">Отображаем пользователю отчёт <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%d0%be%d1%82%d0%be%d0%b1%d1%80%d0%b0%d0%b6%d0%b0%d0%b5%d0%bc-%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d1%82%d0%b5%d0%bb%d1%8e-%d0%be%d1%82%d1%87%d1%91%d1%82" aria-label="Anchor">#</a></span></h2>
+<div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
+  <span class="text-primary-400 ltr:pr-3 rtl:pl-3">
+    
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg>
+
+  </span>
+
+
+  </span>
+  <span class="dark:text-neutral-300"><p>Код view-страниц показывать не буду, потому что там просто размечены таблицы и все. Там нет ничего сложного или непонятного:</p>
+<ul>
+<li>Берем объект отчёта</li>
+<li>Выводим в таблицу только то, что хотим видеть из него</li>
+</ul>
+</span>
+</div>
+
+<p>Мы рассчитали выбросы, посчитали МЭД и йод, теперь настало время показать пользователю то, что мы насчитали.</p>
+<p>Отображать отчёты будем в виде таблиц с <em>эспандером</em>, которым будут закрыты все лишние таблицы, что бы не отвлекали.</p>
+<p>Пользователю будет предложен выбор интервала, за который он хочет получить отчет:</p>
+<p>
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        srcset="
+          /posts/arms-blowout-report/range_selector_hub8905de4270443757fbc89ba36354449_16031_330x0_resize_box_3.png 330w,
+          /posts/arms-blowout-report/range_selector_hub8905de4270443757fbc89ba36354449_16031_660x0_resize_box_3.png 660w,
+          /posts/arms-blowout-report/range_selector_hub8905de4270443757fbc89ba36354449_16031_1024x0_resize_box_3.png 1024w,
+          /posts/arms-blowout-report/range_selector_hub8905de4270443757fbc89ba36354449_16031_1320x0_resize_box_3.png 2x"
+        src="/posts/arms-blowout-report/range_selector_hub8905de4270443757fbc89ba36354449_16031_660x0_resize_box_3.png"
+        alt="Селектор даты"
+      />
+      
+    </figure>
+  
+
+</p>
+<p>Далее будет собран и отображен сам отчёт:</p>
+<p>
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      <img
+        class="my-0 rounded-md"
+        srcset="
+          /posts/arms-blowout-report/result_report_hu56062cab810a52e49eff24af04c30c09_151477_330x0_resize_box_3.png 330w,
+          /posts/arms-blowout-report/result_report_hu56062cab810a52e49eff24af04c30c09_151477_660x0_resize_box_3.png 660w,
+          /posts/arms-blowout-report/result_report_hu56062cab810a52e49eff24af04c30c09_151477_1024x0_resize_box_3.png 1024w,
+          /posts/arms-blowout-report/result_report_hu56062cab810a52e49eff24af04c30c09_151477_1320x0_resize_box_3.png 2x"
+        src="/posts/arms-blowout-report/result_report_hu56062cab810a52e49eff24af04c30c09_151477_660x0_resize_box_3.png"
+        alt="Отчёт"
+      />
+      
+    </figure>
+  
+
+</p>
+<h2 id="в-планах" class="relative group">В планах <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#%d0%b2-%d0%bf%d0%bb%d0%b0%d0%bd%d0%b0%d1%85" aria-label="Anchor">#</a></span></h2>
+<ul>
+<li>Добавить файл настроек, в котором можно будет перечислять группы и параметры, по которым будет происходить сборка отчетов;</li>
+<li>Добавить возможность вывода отчёта в файл и/или отправка отчёта по почте.</li>
+</ul>
+
       </div>
     </section>
     <footer class="pt-8 max-w-prose print:hidden">
@@ -714,7 +915,7 @@
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://www.facebook.com/sharer/sharer.php?u=/posts/arms-blowout-report/&amp;quote=ARMStrong:%20%d0%be%d1%82%d1%87%d0%b5%d1%82%20%d0%bf%d0%be%20%d0%b2%d1%8b%d0%b1%d1%80%d0%be%d1%81%d0%b0%d0%bc"
+          href="https://www.facebook.com/sharer/sharer.php?u=https://owlscatcher.github.io/posts/arms-blowout-report/&amp;quote=ARMStrong:%20%d0%be%d1%82%d1%87%d0%b5%d1%82%20%d0%bf%d0%be%20%d0%b2%d1%8b%d0%b1%d1%80%d0%be%d1%81%d0%b0%d0%bc"
           title="Share on Facebook"
           aria-label="Share on Facebook"
           >
@@ -731,7 +932,7 @@
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://twitter.com/intent/tweet/?url=/posts/arms-blowout-report/&amp;text=ARMStrong:%20%d0%be%d1%82%d1%87%d0%b5%d1%82%20%d0%bf%d0%be%20%d0%b2%d1%8b%d0%b1%d1%80%d0%be%d1%81%d0%b0%d0%bc"
+          href="https://twitter.com/intent/tweet/?url=https://owlscatcher.github.io/posts/arms-blowout-report/&amp;text=ARMStrong:%20%d0%be%d1%82%d1%87%d0%b5%d1%82%20%d0%bf%d0%be%20%d0%b2%d1%8b%d0%b1%d1%80%d0%be%d1%81%d0%b0%d0%bc"
           title="Tweet on Twitter"
           aria-label="Tweet on Twitter"
           >
@@ -748,7 +949,7 @@
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="mailto:?body=/posts/arms-blowout-report/&amp;subject=ARMStrong:%20%d0%be%d1%82%d1%87%d0%b5%d1%82%20%d0%bf%d0%be%20%d0%b2%d1%8b%d0%b1%d1%80%d0%be%d1%81%d0%b0%d0%bc"
+          href="mailto:?body=https://owlscatcher.github.io/posts/arms-blowout-report/&amp;subject=ARMStrong:%20%d0%be%d1%82%d1%87%d0%b5%d1%82%20%d0%bf%d0%be%20%d0%b2%d1%8b%d0%b1%d1%80%d0%be%d1%81%d0%b0%d0%bc"
           title="Send via email"
           aria-label="Send via email"
           >
@@ -770,6 +971,43 @@
 
 
       
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="/posts/exorcism-with-python/">
+              <span
+                class="mr-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-2 text-neutral-700 transition-transform group-hover:translate-x-[2px] group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Запуск Python приложения в качестве службы на Linux-сервер с systemd или причём тут экзорцизм</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2022-07-19 10:00:20 -0800 -0800">19 July 2022</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+        </span>
+      </div>
+    </div>
   
 
 
@@ -856,7 +1094,7 @@
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
-  data-url=""
+  data-url="https://owlscatcher.github.io/"
 >
   <div
     id="search-modal"

@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Owls&#39; Catcher</title>
-    <link>/categories/</link>
+    <link>https://owlscatcher.github.io/categories/</link>
     <description>Recent content in Categories on Owls&#39; Catcher</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 20 Nov 2022 10:00:20 -0800</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Nov 2022 10:00:20 -0800</lastBuildDate><atom:link href="https://owlscatcher.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>armstrong</title>
-      <link>/categories/armstrong/</link>
-      <pubDate>Sun, 20 Nov 2022 10:00:20 -0800</pubDate>
+      <title>projects</title>
+      <link>https://owlscatcher.github.io/categories/projects/</link>
+      <pubDate>Sun, 06 Nov 2022 10:00:20 -0800</pubDate>
       
-      <guid>/categories/armstrong/</guid>
+      <guid>https://owlscatcher.github.io/categories/projects/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>projects</title>
-      <link>/categories/projects/</link>
-      <pubDate>Sun, 20 Nov 2022 10:00:20 -0800</pubDate>
+      <title>blog</title>
+      <link>https://owlscatcher.github.io/categories/blog/</link>
+      <pubDate>Tue, 19 Jul 2022 10:00:20 -0800</pubDate>
       
-      <guid>/categories/projects/</guid>
+      <guid>https://owlscatcher.github.io/categories/blog/</guid>
       <description></description>
     </item>
     
