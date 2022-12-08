@@ -1,0 +1,19 @@
+{{- $id := .Get "id" -}}
+{{- with .Get "type" -}}
+{{- if eq . "track" -}}
+<div style="margin: 0px 10px 10px 10px;;">
+    <iframe
+        style="border: 0; width: 350px; height: 350px;"
+        src="https://bandcamp.com/EmbeddedPlayer/track={{ $id }}/size=large/bgcol=333333/linkcol=9a64ff/minimal=true/transparent=true/">
+    </iframe>
+</div>
+{{- else if eq . "album" -}}
+<div style="margin: 0px 10px 10px 10px;">
+    <iframe
+        style="border: 0; width: 350px; height: 350px;"
+        src="https://bandcamp.com/EmbeddedPlayer/album={{ $id }}/size=large/bgcol=333333/linkcol=9a64ff/minimal=true/transparent=true/">
+    </iframe>
+</div>
+{{- end -}}
+{{- end -}}
+

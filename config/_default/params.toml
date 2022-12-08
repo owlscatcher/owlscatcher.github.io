@@ -22,7 +22,7 @@ enableCodeCopy = true
 
 [footer]
   showCopyright = true
-  showThemeAttribution = true
+  showThemeAttribution = false
   showAppearanceSwitcher = true
   showScrollToTop = true
 
@@ -47,7 +47,7 @@ enableCodeCopy = true
   showTaxonomies = true
   showWordCount = false
   showComments = false
-  sharingLinks = ["facebook", "twitter", "email", "telegram", "instagram"]
+  #sharingLinks = ["facebook", "twitter", "email", "telegram", "instagram"]
 
 [list]
   showBreadcrumbs = false
