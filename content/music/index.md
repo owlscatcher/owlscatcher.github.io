@@ -1,6 +1,6 @@
 ---
 title: "Music"
-Description: "Music page"
+Description: "Owls' Catcher and SOVY music proj. is here!"
 layout: "music"
 ---
 
