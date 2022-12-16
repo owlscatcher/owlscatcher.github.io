@@ -254,11 +254,11 @@ private double GetAverageSystemValue() =>
 
 Пользователю будет предложен выбор интервала, за который он хочет получить отчет:
 
-![Селектор даты](range_selector.png)
+![Селектор даты](range_selector.webp)
 
 Далее будет собран и отображен сам отчёт:
 
-![Отчёт](result_report.png)
+![Отчёт](result_report.webp)
 
 ## В планах
 
