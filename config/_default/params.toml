@@ -51,7 +51,7 @@ enableCodeCopy = true
 
 [list]
   showBreadcrumbs = false
-  showSummary = false
+  showSummary = true
   showTableOfContents = true
   showTaxonomies = true
   groupByYear = true

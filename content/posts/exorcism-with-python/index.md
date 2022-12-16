@@ -6,6 +6,8 @@ tags: ["dev", "python", "linux"]
 categories: ["blog"]
 ---
 
+Рассмотрим, как демонизировать наше python-приложение под Linux.
+
 ## Дьявол в деталях
 
 {{< alert >}}
