@@ -4,7 +4,6 @@ date: 2022-12-14T16:00:00+04:00
 draft: false
 tags: ["cryptocurrency", "visa", "coinbase"]
 categories: ["blog"]
-description: "asdadasdsa"
 ---
 
 Разбераемся, что такое клиптовалюты и что делать в 2022-2023, 
