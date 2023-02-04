@@ -15,7 +15,7 @@ dateFormat = "2 January 2006"
 [author]
   name = "Owls' Catcher"
   image = "img/author.webp"
-  headline = "We are Futurists. Game on."
+  headline = "We are Futurists. Follow the White Owl."
   bio = "Engineer at RIARa, dev. at \"ARMStrong\""
   links = [
     { github = "https://github.com/owlscatcher" },
