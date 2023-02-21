@@ -435,3 +435,24 @@ steam-логин.
 
 Комиссия через WM ниже, чем через Qiwi, но не на столько, что бы возиться с подтверждением своего 
 аккаунта.
+
+## Благодарности серому волшебнику
+
+Если текст был полезен и ты не можешь усмирить желание быть благодарным, то вот мои кошелечки (USDT и TRX кошельки одинаковые, да, это не ошибка):
+
+**Tether (TRC-20, USDT):**
+
+```markdown
+TYvFYUV3h5HwqfyTxskGQK7nDbUHTcwPn2
+```
+
+**Tron (TRX):**
+
+```markdown
+TYvFYUV3h5HwqfyTxskGQK7nDbUHTcwPn2
+```
+
+**Monero (XMR):**
+
+```markdown
+4AbxbT9vrNQTUDCQEPwVLYZq2zTEYzNr9ZzTLaq9YcwVfdxwkWjZ6FsewuXVDXPk7x2rE6FZACmLePPgJEcY4rm1GSHkwTZ
