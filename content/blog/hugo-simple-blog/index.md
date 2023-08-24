@@ -349,6 +349,10 @@ ssh-rsa AASdas...KTTx2lOvqFvqOMAIw== <your_email>@proton.com
 
 Скопировать фразу нужно целиком. Назовем его `public key of ACTIONS_DEPLOY_KEY`.
 
+{{< alert >}}
+__UPD 24.08.2023:__ и ставим галочку внизу формы "Allow write access"!  
+{{< /alert >}}
+
 Далее идем в Secrets ⇒ Actions ⇒ New Repository Secret. Вставляет туда приватный ключ:
 
 ```bash
@@ -362,6 +366,11 @@ cat deployment
 
 Если хочется совсем обойтись без мыши, то установите `screen`. Как пользоваться 
 screen [в этом ответе](https://superuser.com/a/228241).
+{{< /alert >}}
+
+{{< alert >}}
+__UPD 24.08.2023:__ чтобы не получить ошибку, что deploybot не имеет доступа, двигаемся в Actions ⇒ General скроллим 
+вниз до секции Workflow permissions и отмечаем пункт Read and write permissions.
 {{< /alert >}}
 
 ### Настраиваем actions и пушим
@@ -404,6 +413,7 @@ jobs:
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: "latest"
+          extended: true
 
       - name: Build
         run: hugo --minify
@@ -466,6 +476,19 @@ echo "<yourdomen.com>" > static/CNAME
 использовать свой домен. Идем в репозиторий ⇒ Settings ⇒ Pages ⇒ секция `Custom domain`. 
 Вписываем туда свой apex-домен (<yourdomen.com>) и нажимаем save. 
 Домен должен проходить все проверки и GitHub самостоятельно подключит к нему tls-сертификаты.
+
+
+{{< alert >}}
+__UPD 24.08.2023:__ GitHub теперь часто нормально не подхватывает сертификаты! Если вы столкнулись с проблемой запроса 
+сертификата, то решение проблемы следующее:
+- Идете в панель управления DNS, где арендовали домен
+- Ищите там адрес __www__.<yourdomen.com> и создаете / редактируете CNAME запись, добавляя в нее __прямую ссылку на 
+ваш блог__ типа username.github.io, а не <yourdomen.com>.
+
+После этого идете обратно в нстройки репозитория Pages, удаляете ваш кастомный домен, минут 5 чиллите, пока пройдет деплой, 
+и добавляете снова ваш домен в виде <yourdomen.com>, без всяких www. Пройдет проверка DNS и практически сразу буден выдан 
+сертификатю
+{{< /alert >}}
 
 ## Пишем свои кастомные Shortcode
 
