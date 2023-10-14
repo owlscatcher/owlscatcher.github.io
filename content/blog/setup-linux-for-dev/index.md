@@ -406,7 +406,7 @@ gem install solargraph
 И поставим [ripgrep](https://github.com/BurntSushi/ripgrep) для поиска по содержимому через Telescope:
 
 ```bash
-sudo dnf install -y riogrep
+sudo dnf install -y ripgrep
 ```
 
 Далее предлагаю вставить мой конфиг:
