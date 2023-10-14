@@ -15,7 +15,8 @@ categories: ["blog"]
 
 ### Обновляем репозитории и ставим пакеты
 
-Включаем все репозитории, в том числе и с проприетарным ПО, таким как драйверы видеокарт Nvidia, если это не было сделано при установке:
+Включаем все репозитории, в том числе и с проприетарным ПО, таким как драйверы видеокарт Nvidia, если это не было 
+сделано при установке:
 
 Идем в Software, далее следуем скриншотам:
 
@@ -23,7 +24,8 @@ categories: ["blog"]
 
 ![RPM](rpm_fusion.webp)
 
-Включаем [Flatpak](https://www.flatpak.org/setup/Fedora), отсюда мы будем ставить львиную долю ПО, которая ищется на flathub.org:
+Включаем [Flatpak](https://www.flatpak.org/setup/Fedora), отсюда мы будем ставить львиную долю ПО, которая ищется на 
+flathub.org:
 
 ```bash
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
@@ -216,8 +218,8 @@ echo "alias glog=\"git log --pretty=oneline\"" >> ~/.zshrc \
 
 ### duf — показывает, сколько рыбоф еще поместится на hdd/ssd
 
-Иногда нужно посмотреть, сколько осталось свободного места, а вызывать тот же `nautilus` и клацать мышью по примонтированным устройствам
-не очень удобно.
+Иногда нужно посмотреть, сколько осталось свободного места, а вызывать тот же `nautilus` и клацать мышью по 
+примонтированным устройствам не очень удобно.
 
 Для просмотра свободного и занятого дискового пространства обычно предустановлен `df`, используется просто:
 
@@ -239,8 +241,8 @@ tmpfs           1.6G  156K  1.6G   1% /run/user/1000
 /dev/sr0        5.2M  5.2M     0 100% /run/media/<username>/<device_title>
 ```
 
-Не очень наглядно и тяжело ориентироваться (я отсюда еще половину всяких `/loop0n` убрал, чтобы меньше путаницы было). Если красивая
-альтернатива [duf](https://github.com/muesli/duf). Делает все тоже самое, только аккуратнее и понятнее:
+Не очень наглядно и тяжело ориентироваться (я отсюда еще половину всяких `/loop0n` убрал, чтобы меньше путаницы было). 
+Если красивая альтернатива [duf](https://github.com/muesli/duf). Делает все тоже самое, только аккуратнее и понятнее:
 
 ```bash
 duf
@@ -354,6 +356,8 @@ _Тут еще одна шутка о том, что кто-то опять не
 Теперь перейдем к настройке. Мы не будем использовать ванильный Vi или VIM, а поставили форк от VIM
 который называется [NeoVim](https://neovim.io/).
 
+### Предварительные манипуляции
+
 Создадим файл настроек NeoVim:
 
 ```bash
@@ -379,7 +383,33 @@ cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Co
 ```
 Сами шрифты лежал [тут](https://github.com/ryanoasis/nerd-fonts).
 
-Далее предлагаю вставить мой конфиг (который я, кстати, тоже где-то подрезал):
+Я буду писать в основном на [Ruby](https://www.ruby-lang.org/) и мне нужно будет использовать 
+[Solargraph](https://solargraph.org/) для [LSP](https://github.com/neovim/nvim-lspconfig) сервера, так что я 
+дополнительно прокину путь в `$PATH` переменную, добавив эту строку в `~/.zshrc` куда-нибудь в конец:
+
+```bash
+export PATH=$PATH:"/home/owlpaw/bin"
+```
+
+Не забываем перечитать файл:
+
+```bash
+source ~/.zshrc
+```
+
+Установим сам Solargraph:
+
+```bash
+gem install solargraph
+```
+
+И поставим [ripgrep](https://github.com/BurntSushi/ripgrep) для поиска по содержимому через Telescope:
+
+```bash
+sudo dnf install -y riogrep
+```
+
+Далее предлагаю вставить мой конфиг:
 
 Откроем наш файл конфигурации:
 
@@ -387,7 +417,182 @@ cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Co
 nvim ~/.config/nvim/init.vim
 ```
 
-Вставляем это:
+{{< alert >}}
+Я подготовил 2 конфига, но это не означает, что вы можете настроить либо для 1 языка, либо для другого. Вы можете 
+перемешивать конфиги и настройки LSP так, как вам угодно, просто я для C# последнее время не использую NVIM.
+{{< /alert >}}
+
+Для Ruby вставляем такой конфиг (включает LSP и Telescope):
+
+```bash
+" Plugins
+call plug#begin()
+Plug 'morhetz/gruvbox' "https://github.com/morhetz/gruvbox
+Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/nvim-compe'
+Plug 'hrsh7th/vim-vsnip'
+
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
+Plug 'thoughtbot/vim-rspec'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-endwise'
+call plug#end()
+
+" Enable Ruler
+set ru
+" Show the line number
+set number
+" Enable Syntax Highlighting
+syntax enable
+" Enable using the mouse to click or select some peace of code
+set mouse=a
+" Set the Tab to 2 spaces
+set tabstop=2
+set shiftwidth=2
+
+set termguicolors
+set background=dark
+colorscheme gruvbox
+set colorcolumn=120
+
+:map <C-n> :NERDTreeToggle<CR>
+:map <C-p> :Telescope live_grep<CR>
+:map <C-f> :Telescope find_files<CR>
+
+" Lua scripts
+lua << EOF
+require'lspconfig'.solargraph.setup{}
+
+local nvim_lsp = require('lspconfig')
+
+-- Use an on_attach function to only map the following keys
+-- after the language server attaches to the current buffer
+local on_attach = function(client, bufnr)
+  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+  local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
+
+  --Enable completion triggered by <c-x><c-o>
+  buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
+
+  -- Mappings.
+  local opts = { noremap=true, silent=true }
+
+  -- See `:help vim.lsp.*` for documentation on any of the below functions
+  buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+  buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+  buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+  buf_set_keymap('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
+  buf_set_keymap('n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
+  buf_set_keymap('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
+  buf_set_keymap('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
+  buf_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
+  buf_set_keymap('n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+  buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+  buf_set_keymap('n', '<space>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
+  buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
+  buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
+  buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
+  buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+
+end
+
+-- Use a loop to conveniently call 'setup' on multiple servers and
+-- map buffer local keybindings when the language server attaches
+local servers = { "solargraph" }
+for _, lsp in ipairs(servers) do
+  nvim_lsp[lsp].setup {
+    on_attach = on_attach,
+    flags = {
+      debounce_text_changes = 150,
+    }
+}
+end
+EOF
+
+lua << EOF
+vim.o.completeopt = "menuone,noselect"
+
+require'compe'.setup {
+  enabled = true;
+  autocomplete = true;
+  debug = false;
+  min_length = 1;
+  preselect = 'enable';
+  throttle_time = 80;
+  source_timeout = 200;
+  incomplete_delay = 400;
+  max_abbr_width = 100;
+  max_kind_width = 100;
+  max_menu_width = 100;
+  documentation = false;
+
+  source = {
+    path = true;
+    buffer = true;
+    calc = true;
+    vsnip = true;
+    nvim_lsp = true;
+    nvim_lua = true;
+    spell = true;
+    tags = true;
+    snippets_nvim = true;
+    treesitter = true;
+  };
+}
+local t = function(str)
+  return vim.api.nvim_replace_termcodes(str, true, true, true)
+end
+
+local check_back_space = function()
+    local col = vim.fn.col('.') - 1
+    if col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
+        return true
+    else
+        return false
+    end
+end
+
+-- Use (s-)tab to:
+--- move to prev/next item in completion menuone
+--- jump to prev/next snippet's placeholder
+_G.tab_complete = function()
+  if vim.fn.pumvisible() == 1 then
+    return t "<C-n>"
+  elseif vim.fn.call("vsnip#available", {1}) == 1 then
+    return t "<Plug>(vsnip-expand-or-jump)"
+  elseif check_back_space() then
+    return t "<Tab>"
+  else
+    return vim.fn['compe#complete']()
+  end
+end
+_G.s_tab_complete = function()
+  if vim.fn.pumvisible() == 1 then
+    return t "<C-p>"
+  elseif vim.fn.call("vsnip#jumpable", {-1}) == 1 then
+    return t "<Plug>(vsnip-jump-prev)"
+  else
+    -- If <S-Tab> is not working in your terminal, change it to <C-h>
+    return t "<S-Tab>"
+  end
+end
+
+vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+EOF
+```
+
+Для C# вставляем это:
 
 ```bash
 " We start by installing Vim plugin manager to manage plugins.
@@ -548,6 +753,7 @@ let g:OmniSharp_server_use_net6 = 1
 
 Все, вам VIM готов. Хорошо бы почитать все шорткоды для установленных плагинов, например для
 [NerdTree](https://github.com/preservim/nerdtree) открыть / закрыть панель будет `CTRL + n` и тд.
+
 
 ## Ranger — VIM-подобный файловый менеджер
 
