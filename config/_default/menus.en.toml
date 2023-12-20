@@ -21,14 +21,19 @@
   weight = 20
 
 [[main]]
+	name = "Study"
+	pageRef = "study"
+	weight = 30
+
+[[main]]
   name = "Music"
   pageRef = "music"
-  weight = 30
+  weight = 40
 
 [[main]]
   name = "Telegram"
   url = "https://t.me/owlpawgram"
-  weight = 40
+  weight = 50
 
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before
