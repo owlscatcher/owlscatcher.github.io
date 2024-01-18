@@ -10,6 +10,8 @@ categories: ["blog"]
 
 ## Raspberry Pi для малоимущих
 
+{{< buymeacoffee >}}
+
 Многие хотя бы раз слышали про [Raspberry Pi](https://www.raspberrypi.com/), это крутые одноплатные компьютеры с
 процессорами на [arm](https://en.wikipedia.org/wiki/ARM_architecture_family) архитектуре. Это малютки всем хороши, но
 всегда есть какое-то но, и здесь их больше, чем меньше:
@@ -274,7 +276,15 @@ ssh root@10.0.0.10
 
 ## Благодарности серому волшебнику
 
-Если текст был полезен и ты не можешь усмирить желание быть благодарным, то вот мои кошелечки (USDT и TRX кошельки одинаковые, да, это не ошибка):
+Если текст был полезен и ты не можешь усмирить желание быть благодарным, то можешь купить мне чашечку кофе: 
+
+{{< buymeacoffee >}}
+
+Воспользоваться моей реферальной ссылкой на DigitalOcean:
+
+{{< digitalocean >}}
+
+Или же закинуть монету в мой кошелёк (USDT и TRX кошельки одинаковые, да, это не ошибка):
 
 **Tether (TRC-20, USDT):**
 
@@ -293,3 +303,4 @@ TYvFYUV3h5HwqfyTxskGQK7nDbUHTcwPn2
 ```markdown
 4AbxbT9vrNQTUDCQEPwVLYZq2zTEYzNr9ZzTLaq9YcwVfdxwkWjZ6FsewuXVDXPk7x2rE6FZACmLePPgJEcY4rm1GSHkwTZ
 ```
+

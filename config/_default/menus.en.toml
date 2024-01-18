@@ -21,19 +21,21 @@
   weight = 20
 
 [[main]]
-	name = "Study"
-	pageRef = "study"
-	weight = 30
-
-[[main]]
   name = "Music"
   pageRef = "music"
-  weight = 40
+  weight = 30
 
 [[main]]
   name = "Telegram"
   url = "https://t.me/owlpawgram"
+  weight = 40
+
+[[main]]
+  name = "Bymeacoffee"
+	url = "https://buymeacoffee.com/owlscatcher"
   weight = 50
+  [main.params]
+    target = "_blank"
 
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before

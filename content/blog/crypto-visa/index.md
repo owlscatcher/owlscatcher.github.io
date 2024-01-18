@@ -442,7 +442,15 @@ steam-логин.
 
 ## Благодарности серому волшебнику
 
-Если текст был полезен и ты не можешь усмирить желание быть благодарным, то вот мои кошелечки (USDT и TRX кошельки одинаковые, да, это не ошибка):
+Если текст был полезен и ты не можешь усмирить желание быть благодарным, то можешь купить мне чашечку кофе: 
+
+{{< buymeacoffee >}}
+
+Воспользоваться моей реферальной ссылкой на DigitalOcean:
+
+{{< digitalocean >}}
+
+Или же закинуть монету в мой кошелёк (USDT и TRX кошельки одинаковые, да, это не ошибка):
 
 **Tether (TRC-20, USDT):**
 
@@ -461,3 +469,4 @@ TYvFYUV3h5HwqfyTxskGQK7nDbUHTcwPn2
 ```markdown
 4AbxbT9vrNQTUDCQEPwVLYZq2zTEYzNr9ZzTLaq9YcwVfdxwkWjZ6FsewuXVDXPk7x2rE6FZACmLePPgJEcY4rm1GSHkwTZ
 ```
+
