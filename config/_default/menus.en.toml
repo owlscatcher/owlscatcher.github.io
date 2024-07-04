@@ -26,14 +26,9 @@
   weight = 30
 
 [[main]]
-  name = "Telegram"
-  url = "https://t.me/owlpawgram"
+  name = "CV"
+  url = "cv"
   weight = 40
-
-[[main]]
-  name = "Bymeacoffee"
-	url = "https://buymeacoffee.com/owlscatcher"
-  weight = 50
   [main.params]
     target = "_blank"
 

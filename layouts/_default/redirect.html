@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="refresh" content="0; url={{ .Params.redirect_url }}" />
+    <script type="text/javascript">
+        window.location.href = "{{ .Params.redirect_url }}"
+    </script>
+</head>
+<body>
+    <p>If you are not redirected automatically, follow this <a href="{{ .Params.redirect_url }}">link</a>.</p>
+</body>
+</html>
+
