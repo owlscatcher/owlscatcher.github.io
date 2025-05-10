@@ -1,7 +1,7 @@
 ---
 title: "WireGuar — мое окно в Европу за $4-$6 в месяц"
 date: 2022-12-15T16:00:00+04:00
-draft: false
+draft: true
 tags: ["vpn", "wireguard"]
 categories: ["blog"]
 ---

@@ -244,9 +244,11 @@ systemctl status bot.service
 
 ## Благодарности серому волшебнику
 
-Если текст был полезен и ты не можешь усмирить желание быть благодарным, то можешь купить мне чашечку кофе: 
+Если текст был полезен и ты не можешь усмирить желание быть благодарным, то можешь: 
 
-{{< buymeacoffee >}}
+Воспользоваться моей реферальной ссылкой на TimeWeb:
+
+{{< timeweb >}}
 
 Воспользоваться моей реферальной ссылкой на DigitalOcean:
 
@@ -271,4 +273,3 @@ TYvFYUV3h5HwqfyTxskGQK7nDbUHTcwPn2
 ```markdown
 4AbxbT9vrNQTUDCQEPwVLYZq2zTEYzNr9ZzTLaq9YcwVfdxwkWjZ6FsewuXVDXPk7x2rE6FZACmLePPgJEcY4rm1GSHkwTZ
 ```
-
