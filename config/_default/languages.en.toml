@@ -6,21 +6,20 @@ weight = 1
 rtl = false
 
 title = "Owl's Paw"
-header.logo = "img/logo.webp"
 description = "Hi, my name is Alexander, nice to meet you!"
 # copyright = "Copy, _right?_ :thinking_face:"
 
 dateFormat = "2 January 2006"
 
-[author]
-  name = "Owls' Catcher"
-  image = "img/author.webp"
-  headline = "We are Futurists. Follow the White Owl."
-  bio = "Engineer at RIARa, dev. at \"ARMStrong\""
-  links = [
-    { github = "https://github.com/owlscatcher" },
-    { instagram = "https://instagram.com/owlscatcher" },
-    { soundcloud = "https://soundcloud.com/owlscatcher" },
-    { telegram = "https://t.me/owlscatcher" },
-    { youtube = "https://youtube.com/@owlscatcher" },
-  ]
+[params.author]
+name = "Owls' Catcher"
+image = "img/author.webp"
+headline = "We are Futurists. Follow the White Owl."
+bio = "Engineer at RIARa, dev. at \"ARMStrong\""
+links = [
+  { github = "https://github.com/owlscatcher" },
+  { instagram = "https://instagram.com/owlscatcher" },
+  { soundcloud = "https://soundcloud.com/owlscatcher" },
+  { telegram = "https://t.me/owlscatcher" },
+  { youtube = "https://youtube.com/@owlscatcher" },
+]

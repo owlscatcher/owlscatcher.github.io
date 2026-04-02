@@ -1,19 +1,32 @@
 {{- $id := .Get "id" -}}
-{{- with .Get "type" -}}
-{{- if eq . "track" -}}
-<div style="margin: 0px 10px 10px 10px;;">
-    <iframe
-        style="border: 0; width: 350px; height: 350px;"
-        src="https://bandcamp.com/EmbeddedPlayer/track={{ $id }}/size=large/bgcol=333333/linkcol=9a64ff/minimal=true/transparent=true/">
-    </iframe>
-</div>
-{{- else if eq . "album" -}}
-<div style="margin: 0px 10px 10px 10px;">
-    <iframe
-        style="border: 0; width: 350px; height: 350px;"
-        src="https://bandcamp.com/EmbeddedPlayer/album={{ $id }}/size=large/bgcol=333333/linkcol=9a64ff/minimal=true/transparent=true/">
-    </iframe>
-</div>
-{{- end -}}
-{{- end -}}
+{{- $type := .Get "type" -}}
+<div
+  class="group relative overflow-hidden rounded-2xl bg-neutral-900/80 shadow-lg ring-1 ring-neutral-700/60 transition duration-300 hover:-translate-y-1 hover:bg-neutral-800/90 hover:shadow-2xl hover:ring-neutral-500/50 dark:bg-neutral-950/80 dark:ring-neutral-600/50 dark:hover:ring-neutral-500/40"
+>
+  <div
+    class="relative w-full aspect-square min-h-[240px]"
+    style="aspect-ratio: 1 / 1"
+  >
+    {{- if eq $type "track" -}}
+      <iframe
+        title="Bandcamp track embed"
+        class="absolute inset-0 h-full w-full border-0"
+        loading="lazy"
+        allow="encrypted-media"
+        src="https://bandcamp.com/EmbeddedPlayer/track={{ $id }}/size=large/bgcol=000000/linkcol=9a64ff/minimal=true/transparent=true/"
+      ></iframe>
+    {{- else if eq $type "album" -}}
+      <iframe
+        title="Bandcamp album embed"
+        class="absolute inset-0 h-full w-full border-0"
+        loading="lazy"
+        allow="encrypted-media"
+        src="https://bandcamp.com/EmbeddedPlayer/album={{ $id }}/size=large/bgcol=000000/linkcol=9a64ff/minimal=true/transparent=true/"
+      ></iframe>
+    {{- end -}}
+  </div>
 
+  <div
+    class="pointer-events-none absolute inset-0 bg-black/0 transition duration-300 group-hover:bg-black/20"
+  ></div>
+</div>

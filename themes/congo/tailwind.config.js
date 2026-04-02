@@ -1,5 +1,8 @@
 module.exports = {
   content: [
+    // Site project (parent of themes/congo): custom layouts & content use Tailwind too
+    "../../layouts/**/*.html",
+    "../../content/**/*.{html,md}",
     "./layouts/**/*.html",
     "./content/**/*.{html,md}",
     "./themes/congo/layouts/**/*.html",

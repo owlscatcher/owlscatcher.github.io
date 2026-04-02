@@ -1,0 +1,49 @@
+{{ define "main" }}
+  <style>
+    .music-bc-grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: 1fr;
+      width: 100%;
+      max-width: none;
+    }
+    @media (min-width: 640px) {
+      .music-bc-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    @media (min-width: 1024px) {
+      .music-bc-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+    @media (min-width: 1280px) {
+      .music-bc-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+    }
+  </style>
+  <article class="w-full max-w-full">
+    <header class="mb-8">
+      {{ if .Params.showBreadcrumbs | default (.Site.Params.article.showBreadcrumbs | default false) }}
+        {{ partial "breadcrumbs.html" . }}
+      {{ end }}
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        {{ .Title | emojify }}
+      </h1>
+      {{ with .Description }}
+        <p class="mt-3 max-w-2xl text-base text-neutral-600 dark:text-neutral-400">
+          {{ . }}
+        </p>
+      {{ end }}
+    </header>
+
+    <section class="music-bc-grid">
+      {{ .Content | emojify }}
+    </section>
+
+    <footer class="pt-10 print:hidden">
+      {{ partial "sharing-links.html" . }}
+    </footer>
+  </article>
+{{ end }}
